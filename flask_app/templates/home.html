@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}Home - ECommerce App{% endblock %}
+
+{% block content %}
+<h1>Welcome to Our ECommerce Store</h1>
+<p>Professional Flask application with clean architecture!</p>
+<p>Focus: Backend development with production-ready structure</p>
+
+<h3>Application Architecture:</h3>
+<ul>
+    <li>✅ <strong>Application Factory</strong> - Configurable app creation</li>
+    <li>✅ <strong>Blueprints</strong> - Modular route organization</li>
+    <li>✅ <strong>Configuration Management</strong> - Environment-based configs</li>
+    <li>✅ <strong>Database Models</strong> - Clean data layer</li>
+    <li>✅ <strong>Error Handling</strong> - Proper HTTP responses</li>
+    <li>✅ <strong>Soft Deletes</strong> - Data preservation</li>
+</ul>
+
+<h3>Available API Endpoints (Full CRUD):</h3>
+<ul>
+    <li><strong>GET /</strong> - Home page</li>
+    <li><strong>GET /health</strong> - Health check (JSON response)</li>
+    <li><strong>GET /api/info</strong> - API information</li>
+    <li><strong>GET /api/products</strong> - Get all products</li>
+    <li><strong>GET /api/products/&lt;id&gt;</strong> - Get single product by ID</li>
+    <li><strong>POST /api/products</strong> - Create new product</li>
+    <li><strong>PUT /api/products/&lt;id&gt;</strong> - Update product by ID</li>
+    <li><strong>DELETE /api/products/&lt;id&gt;</strong> - Delete product by ID</li>
+</ul>
+
+<h3>Test the Database:</h3>
+<p>GET operations (click to test):</p>
+<ul>
+    <li><a href="/api/products" target="_blank">View all products</a></li>
+    <li><a href="/api/products/1" target="_blank">View product with ID 1</a></li>
+    <li><a href="/api/info" target="_blank">API information</a></li>
+</ul>
+
+<h3>New Features:</h3>
+<ul>
+    <li>🆕 <strong>Product Categories</strong> - Products now have categories</li>
+    <li>🆕 <strong>Soft Deletes</strong> - Products are deactivated, not removed</li>
+    <li>🆕 <strong>Updated Timestamps</strong> - Track when products are modified</li>
+    <li>🆕 <strong>Environment Config</strong> - Dev/Production configurations</li>
+</ul>
+
+<h3>Test POST/PUT/DELETE (use tools like Postman or curl):</h3>
+<p><strong>Create Product with Category:</strong></p>
+<code>
+POST /api/products<br>
+Content-Type: application/json<br>
+{"name": "Smartphone", "price": 599.99, "description": "Latest model", "stock": 15, "category": "electronics"}
+</code>
+{% endblock %}
